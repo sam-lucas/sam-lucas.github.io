@@ -3,6 +3,32 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+@media screen and (min-width: 768px) {
+    .name {
+        border-right: solid 3px white;
+        white-space: nowrap;
+        overflow: hidden;
+        margin: 0 auto;
+        }
+
+    /* Animation */
+    .name {
+        animation: animated-text 1s steps(9,end) 1s 1 normal both,
+                animated-cursor 600ms steps(29,end) infinite;
+    }
+}
+
+@keyframes animated-text{
+from{width: 0;}
+to{width: 445px;}
+}
+  
+  /* cursor animations */
+  
+  @keyframes animated-cursor{
+    from{border-right-color: white;}
+    to{border-right-color: transparent;}
+  }
 
 .logos {
     text-decoration:none;
