@@ -1,376 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" content="Sam Lucas - Professional Portfolio">
-    <meta name="description" content="Great at python, afraid of snakes 🐍">
-    <meta name="author" content="Sam Lucas">
-
-    <title>Sam Lucas</title>
-
-    <link rel="icon"
-      type="image/png"
-      href="./img/favicon.png" />
-
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="./css/freelancer.css" rel="stylesheet">
-
-    <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="Sam Lucas - Professional Portfolio">
+  <meta name="description" content="Great at python, afraid of snakes 🐍">
+  <meta name="author" content="Sam Lucas">
+  <title>Sam Lucas</title>
+  <link rel="icon" type="image/png" href="./img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+  </script>
+  <script type="module" src="./js/scene.js"></script>
+  <script defer src="./js/ui.js"></script>
 </head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
 
-<body id="page-top" class="index">
+  <nav class="nav">
+    <a class="brand" href="#top"><span class="accent">&gt;</span> Sam Lucas <span class="accent cursor">_</span></a>
+    <div class="nav-links">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top"><span style="color:#4B95DB;">> </span>Sam Lucas<span style="color:#4B95DB;"> _</span></span></a></div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile.png" alt="">
-                    <div class="intro-text">
-                        <span class="name">Sam Lucas</span>
-                        <hr class="star-light">
-                        <span class="skills"><i>Great at python, afraid of snakes</i></span>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <main id="top">
+    <header class="hero">
+      <img class="avatar" src="./img/profile.png" alt="Portrait of Sam Lucas" width="160" height="160">
+      <p class="eyebrow">Engineer &amp; Entrepreneur</p>
+      <h1>Sam Lucas</h1>
+      <p class="tagline">Great at python, afraid of snakes</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#portfolio">View portfolio</a>
+        <a class="btn" href="./docs/Sam_Lucas_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
     </header>
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
-                    <hr class="star-primary">
-                    <br/>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <br/>CypherMed Cloud
-                            </div>
-                        </div>
-                        <img src="./img/cyphermed_tile.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <br/>Kolosos
-                            </div>
-                        </div>
-                        <img src="./img/kolosos_tile.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-            	<div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <br/>Autonomous Temperature Detector
-                            </div>
-                        </div>
-                        <img src="./img/atd_tile.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <br/>Proton Injector
-                            </div>
-                        </div>
-                        <img src="./img/rfq_tile.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <br/>Bakeout System
-                            </div>
-                        </div>
-                        <img src="./img/exhaust_tile.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <br/>Gyrotrons
-                            </div>
-                        </div>
-                        <img src="./img/gyrotron_tile.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
+
+    <section id="portfolio" class="section">
+      <h2 class="reveal">Portfolio</h2>
+      <div class="grid">
+        <button class="card reveal" data-open="p-cyphermed">
+          <img src="./img/cyphermed_tile.png" alt="" loading="lazy">
+          <span class="card-title">CypherMed Cloud</span>
+        </button>
+        <button class="card reveal" data-open="p-kolosos">
+          <img src="./img/kolosos_tile.png" alt="" loading="lazy">
+          <span class="card-title">Kolosos</span>
+        </button>
+        <button class="card reveal" data-open="p-atd">
+          <img src="./img/atd_tile.png" alt="" loading="lazy">
+          <span class="card-title">Autonomous Temperature Detector</span>
+        </button>
+        <button class="card reveal" data-open="p-rfq">
+          <img src="./img/rfq_tile.png" alt="" loading="lazy">
+          <span class="card-title">Proton Injector</span>
+        </button>
+        <button class="card reveal" data-open="p-bakeout">
+          <img src="./img/exhaust_tile.png" alt="" loading="lazy">
+          <span class="card-title">Bakeout System</span>
+        </button>
+        <button class="card reveal" data-open="p-gyrotron">
+          <img src="./img/gyrotron_tile.png" alt="" loading="lazy">
+          <span class="card-title">Gyrotrons</span>
+        </button>
+      </div>
     </section>
-	<section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-offset-2 col-lg-8">
-                    <p><span class="skills"><font size="4">
-                        Hi, my name is Sam. I'm an engineer and entrepreneur with a fierce passion for building and learning.
-                        My specialty lies in designing and developing large-scale cloud-based system, and B2B software product development.<br/><br/>
-                        Notable past projects of mine include proton accelerator control systems used in cancer treatment, autonomous 
-                        COVID-detection kiosks, and an AI-powered rules-based anomaly detection cloud platform used in high-risk environments.<br/><br/>
-                        I am currently focused on developing a cutting-edge cloud platform designed specifically for medical devices called 
-                        <a href="https://www.cyphermed.cloud" style="color: white" ><u>CypherMed Cloud</u></a>. In 2024, I co-founded a subsidiary business dedicated to developing and marketing this platform as 
-                        an off-the-shelf solution, where I currently operate as Chief Technology Officer.<br/><br/>
-                        For more about my professional skills and experience please see my resume.
-                    </font></span></p>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                	<a href="./docs/Sam_Lucas_Resume.pdf" class="btn btn-lg btn-outline" style="margin-top:30px;" target="_blank">
-                	<i class="fa fa-download" style="padding-right: 10px"></i>Download Resume (PDF)
-                	</a>
-                </div>
-            </div>
-        </div>
+
+    <section id="about" class="section">
+      <h2 class="reveal">About</h2>
+      <div class="panel reveal">
+        <p>Hi, my name is Sam. I'm an engineer and entrepreneur with a fierce passion for building and learning.
+          My specialty lies in designing and developing large-scale cloud-based systems, and B2B software product development.</p>
+        <p>Notable past projects of mine include proton accelerator control systems used in cancer treatment, autonomous
+          COVID-detection kiosks, an AI-powered rules-based anomaly detection cloud platform used in high-risk environments,
+          and a cutting-edge cloud platform designed specifically for medical devices.</p>
+        <p>I am currently a Lead Software Engineer at Capital One, where I am developing an AI-infused platform for controls
+          execution and monitoring, as well as the agent orchestration platform that supports it.</p>
+        <p>For more about my professional skills and experience please see my resume.</p>
+        <a class="btn btn-primary" href="./docs/Sam_Lucas_Resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+      </div>
     </section>
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Contact</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="col-lg-offset-2 col-lg-8">
-                    <p><span class="skills"><center>
-                        <font size="6"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;sam.n.lucas@gmail.com</font><br/><br/>
-                        <font size="6"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;(571) 274-8261</font><br/><br/>
-                        <font size="6"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Houston, TX</font>
-                    </center></span></p>
-                </div>
-        </div>
-    </section>
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                	<div class="footer-col col-md-4"></div>
-                    <div class="footer-col col-md-4"><center>
-                        <h3>Find Me On</h3>
-                        <a style="text-decoration:none;" href="https://www.linkedin.com/in/the-sam-lucas"><img class ="logos" style="width: 125px;" src="./img/linkedin.png"/></a>
-                    </center>
-                    </div>
-                    <div class="footer-col col-md-4"></div>
-                </div>
-            </div>
-        </div>
-    </footer>
+  </main>
 
-    <div class="scroll-top page-scroll visible-xs visible-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>CypherMed Cloud</h2>
-                            <hr class="star-primary">
-                            <img src="./img/cyphermed_banner.png" class="img-responsive img-centered" alt="">
-                            <p>My current focus is developing the software product and business known as CypherMed Cloud, which is a platform design for medical devices. Originally conceived as an internal tool at Promenade Software, I worked with the President to establish a subsidary business focused on developing and marking this platform as a off-the-shelf B2B solution. I currently operate as Chief Technology Officer.</p><br/>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Kolosos</h2>
-                            <hr class="star-primary">
-                            <img src="./img/caretaker_banner.png" class="img-responsive img-centered" alt="">
-                            <p>During my time at Loko AI, I worked on Kolosos (formerly Caretaker), a real-time computer vision platform that takes any video input and instantly provides actionable insights and IoT automation for risk management, security, safety and defense. Kolosos was designed to be a highly scalable and performant machine learning tool. Incorporated in the efficient microservice design is my custom stream engine, which allows for secure, ultra-low latency processing of video streams. Variants of the system were also developed for GovCloud and local stacks so as to better serve our military customers and others with stringent security requirements.</p><br/>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Autonomous Temperature Detector (ATD)</h2>
-                            <hr class="star-primary">
-                            <p>The ATD is a hands-free infrared thermometer in a kiosk form factor that automatically measures human body temperature at the inner-eye canthi for rapid elevated temperature screening. I was tasked with developing the control firmware and accompanying cloud service for this product. A facial recognition algorithm locks onto a user within proximity and captures their temperature from a high resolution thermal image, within a tolerance of ±0.2°C in less than a second.</p><br/>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>1.6 MeV Proton Injector</h2>
-                            <hr class="star-primary">
-                            <img src="./img/pics_banner.png" class="img-responsive img-centered" alt="">
-                            <p>During my time at Bridge12, I developed the control system for their latest 1.6 MeV Proton Injector, including the firmware for various embedded subsystems as well as the technician's graphical control software (pictured above). Injector systems like these are crucial components in cutting-edge proton therapy devices used for cancer treatment. The first of these systems incorporating Bridge12 injectors will go on to treat patients in Mass General Hospital.</p><br/><br/>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Vacuum Bakeout System</h2>
-                            <hr class="star-primary">
-                            <img src="./img/bakeout_banner.png" class="img-responsive img-centered" alt="">
-                            <p>Bridge12 has an in-house exhausting station which is used to remove volatile compounds from vacuum devices via the process colloquially known as a bakeout. I had the privilege of developing the control system for the recent system redesign. The previous system required lots of manual operation and depended on clunky LabView software, whereas the new system automates the majority of the bakeout process and features a user-friendly, efficient control software. The low level control is also far more robust in this revision through the utilization of our multipurpose signal interface board, for which I wrote the firmware.</p><br/>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Gyrotrons</h2>
-                            <hr class="star-primary">
-                            <img src="./img/gyrotron_banner.png" class="img-responsive img-centered" alt="">
-                            <p>During my time at Bridge12 I have worked on the control systems for a variety of gyrotrons in a wide range of frequencies and power. More recently I have worked towards modularizing the design with a universally adaptable control software that considerably streamlines our controls development. At the hardware level, these systems are fast, reliable, and fail-safe through the utilization of embedded controllers. At the software level, controls are designed to be intuitive, powerful, and dare I say beautiful.</p><br/><br/>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+  <footer class="footer">
+    <a href="https://www.linkedin.com/in/the-sam-lucas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
+    <span>&copy; Sam Lucas</span>
+  </footer>
 
-    <script src="./js/jquery.js"></script>
+  <dialog id="p-cyphermed">
+    <div class="dialog-body">
+      <h2>CypherMed Cloud</h2>
+      <p>I led the development of the software product and business known as <a href="https://www.cyphermed.cloud" target="_blank" rel="noopener">CypherMed Cloud</a>, which is a platform designed for medical devices. Originally conceived as an internal tool at Promenade Software, I worked with the President to establish a subsidiary business focused on developing and marketing this platform as an off-the-shelf B2B solution.</p>
+      <form method="dialog"><button class="btn">Close</button></form>
+    </div>
+  </dialog>
 
-    <script src="./js/bootstrap.min.js"></script>
+  <dialog id="p-kolosos">
+    <div class="dialog-body">
+      <h2>Kolosos</h2>
+      <img src="./img/caretaker_banner.png" alt="Kolosos" loading="lazy">
+      <p>During my time at Loko AI, I worked on Kolosos (formerly Caretaker), a real-time computer vision platform that takes any video input and instantly provides actionable insights and IoT automation for risk management, security, safety and defense. Kolosos was designed to be a highly scalable and performant machine learning tool. Incorporated in the efficient microservice design is my custom stream engine, which allows for secure, ultra-low latency processing of video streams. Variants of the system were also developed for GovCloud and local stacks so as to better serve our military customers and others with stringent security requirements.</p>
+      <form method="dialog"><button class="btn">Close</button></form>
+    </div>
+  </dialog>
 
-    <script src="./js/jquery.easing.min.js"></script>
-    <script src="./js/classie.js"></script>
-    <script src="./js/cbpAnimatedHeader.js"></script>
+  <dialog id="p-atd">
+    <div class="dialog-body">
+      <h2>Autonomous Temperature Detector (ATD)</h2>
+      <p>The ATD is a hands-free infrared thermometer in a kiosk form factor that automatically measures human body temperature at the inner-eye canthi for rapid elevated temperature screening. I was tasked with developing the control firmware and accompanying cloud service for this product. A facial recognition algorithm locks onto a user within proximity and captures their temperature from a high resolution thermal image, within a tolerance of ±0.2°C in less than a second.</p>
+      <form method="dialog"><button class="btn">Close</button></form>
+    </div>
+  </dialog>
 
-    <script src="./js/jqBootstrapValidation.js"></script>
-    <script src="./js/contact_me.js"></script>
+  <dialog id="p-rfq">
+    <div class="dialog-body">
+      <h2>1.6 MeV Proton Injector</h2>
+      <img src="./img/pics_banner.png" alt="Proton injector control software" loading="lazy">
+      <p>During my time at Bridge12, I developed the control system for their latest 1.6 MeV Proton Injector, including the firmware for various embedded subsystems as well as the technician's graphical control software (pictured above). Injector systems like these are crucial components in cutting-edge proton therapy devices used for cancer treatment. The first of these systems incorporating Bridge12 injectors will go on to treat patients in Mass General Hospital.</p>
+      <form method="dialog"><button class="btn">Close</button></form>
+    </div>
+  </dialog>
 
-    <script src="./js/freelancer.js"></script>
+  <dialog id="p-bakeout">
+    <div class="dialog-body">
+      <h2>Vacuum Bakeout System</h2>
+      <img src="./img/bakeout_banner.png" alt="Vacuum bakeout system" loading="lazy">
+      <p>Bridge12 has an in-house exhausting station which is used to remove volatile compounds from vacuum devices via the process colloquially known as a bakeout. I had the privilege of developing the control system for the recent system redesign. The previous system required lots of manual operation and depended on clunky LabView software, whereas the new system automates the majority of the bakeout process and features a user-friendly, efficient control software. The low level control is also far more robust in this revision through the utilization of our multipurpose signal interface board, for which I wrote the firmware.</p>
+      <form method="dialog"><button class="btn">Close</button></form>
+    </div>
+  </dialog>
 
+  <dialog id="p-gyrotron">
+    <div class="dialog-body">
+      <h2>Gyrotrons</h2>
+      <img src="./img/gyrotron_banner.png" alt="Gyrotron" loading="lazy">
+      <p>During my time at Bridge12 I have worked on the control systems for a variety of gyrotrons in a wide range of frequencies and power. More recently I have worked towards modularizing the design with a universally adaptable control software that considerably streamlines our controls development. At the hardware level, these systems are fast, reliable, and fail-safe through the utilization of embedded controllers. At the software level, controls are designed to be intuitive, powerful, and dare I say beautiful.</p>
+      <form method="dialog"><button class="btn">Close</button></form>
+    </div>
+  </dialog>
 </body>
 </html>
